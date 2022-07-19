@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.711577396900">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.711582674609">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -27,11 +27,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../resources/css/retype.css?v=2.4.0.711577396900" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.711582674609" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.711577396900" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.711582674609" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.711577396900" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.711582674609" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -235,6 +235,81 @@
         <span>Package Management in FreeBSD</span>
     </h1>
 </doc-anchor-target>
+<doc-anchor-target id="check-package-repositories-on-system">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#check-package-repositories-on-system">#</doc-anchor-trigger>
+        <span>Check Package Repositories on System</span>
+    </h2>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">cat /etc/pkg/FreeBSD.conf</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="pkg_info">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pkg_info">#</doc-anchor-trigger>
+        <span>pkg_info</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="show-files-for-package">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#show-files-for-package">#</doc-anchor-trigger>
+        <span>Show files for package</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">pkg_info -L &lt;pkg_name&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="id-package-where-binary-is-included">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#id-package-where-binary-is-included">#</doc-anchor-trigger>
+        <span>ID Package where Binary is included</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">pkg_info -W &lt;/usr/local/bin/ls&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="pkgng">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pkgng">#</doc-anchor-trigger>
+        <span>pkgng</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="show-installed-packages">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#show-installed-packages">#</doc-anchor-trigger>
+        <span>Show installed packages</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">pkg info</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="obtain-information-about-a-specific-package">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#obtain-information-about-a-specific-package">#</doc-anchor-trigger>
+        <span>Obtain Information about a Specific Package</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">pkg info &lt;pkg name&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="list-files-in-a-package">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#list-files-in-a-package">#</doc-anchor-trigger>
+        <span>List Files in a Package</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">pkg list &lt;pkg name&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="id-package-where-binary-is-included-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#id-package-where-binary-is-included-1">#</doc-anchor-trigger>
+        <span>ID Package where Binary is included</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">pkg which /usr/local/bin/binary1</code></pre>
+</doc-codeblock></div>
 
                                 
                                 <!-- Required only on API pages -->
