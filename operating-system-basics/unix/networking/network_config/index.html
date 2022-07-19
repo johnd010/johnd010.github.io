@@ -9,32 +9,32 @@
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>Index</title>
-    <meta name="title" content="Index">
-    <meta name="description" content="This site includes my notes and useful information for security research and penetration testing purposes." />
+    <title>Network Configuration Information</title>
+    <meta name="title" content="Network Configuration Information">
+    <meta name="description" content="ifconfig [-a] or ip a are the commands that will generally give you basic networking information on a nix machine." />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://www.jd0101.com/" />
+    <link rel="canonical" href="https://www.jd0101.com/operating-system-basics/unix/networking/network_config/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.jd0101.com/">
-    <meta property="og:title" content="Index">
-    <meta property="og:description" content="This site includes my notes and useful information for security research and penetration testing purposes.">
+    <meta property="og:url" content="https://www.jd0101.com/operating-system-basics/unix/networking/network_config/">
+    <meta property="og:title" content="Network Configuration Information">
+    <meta property="og:description" content="ifconfig [-a] or ip a are the commands that will generally give you basic networking information on a nix machine.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.jd0101.com/">
-    <meta property="twitter:title" content="Index">
-    <meta property="twitter:description" content="This site includes my notes and useful information for security research and penetration testing purposes.">
+    <meta property="twitter:url" content="https://www.jd0101.com/operating-system-basics/unix/networking/network_config/">
+    <meta property="twitter:title" content="Network Configuration Information">
+    <meta property="twitter:description" content="ifconfig [-a] or ip a are the commands that will generally give you basic networking information on a nix machine.">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="resources/css/retype.css?v=2.4.0.711570238469" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.711570238469" rel="stylesheet" />
 
-    <script type="text/javascript" src="resources/js/config.js?v=2.4.0.711570238469" data-turbo-eval="false" defer></script>
-    <script type="text/javascript" src="resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="resources/js/lunr.js?v=2.4.0.711570238469" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.711570238469" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.711570238469" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -49,7 +49,7 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="" class="flex items-center leading-snug text-xl">
+                        <a id="docs-site-logo" href="../../../../" class="flex items-center leading-snug text-xl">
                             <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">Security Research Notes</span>
                         </a>
                     </div>
@@ -152,19 +152,190 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="index" class="break-words">
+<doc-anchor-target id="network-configuration-information" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#index">#</doc-anchor-trigger>
-        <span>Index</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#network-configuration-information">#</doc-anchor-trigger>
+        <span>Network Configuration Information</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="about">
+<p><code v-pre>ifconfig [-a]</code> or <code v-pre>ip a</code> are the commands that will generally give you basic networking information on a nix machine.</p>
+<doc-anchor-target id="persistent-network-information">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#about">#</doc-anchor-trigger>
-        <span>About</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#persistent-network-information">#</doc-anchor-trigger>
+        <span>Persistent Network Information</span>
     </h2>
 </doc-anchor-target>
-<p>This site includes my notes and useful information for security research and penetration testing purposes.</p>
+<p>Across the various nix variants, you can set and view persistent networking configurations via different mechanisms.</p>
+<doc-anchor-target id="centos">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#centos">#</doc-anchor-trigger>
+        <span>CentOS</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">cat /etc/sysconfig/network-scripts/ifcfg*</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="debian">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#debian">#</doc-anchor-trigger>
+        <span>Debian</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">cat /etc/network/interfaces</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="solaris">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#solaris">#</doc-anchor-trigger>
+        <span>Solaris</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">cat /etc/hostname.&lt;interface&gt;</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">cat /etc/inet/ipnodes</code></pre>
+</doc-codeblock></div>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p><em><strong>Note:</strong></em> You can configure Solaris 11 networking information via: <code v-pre>ipadm</code> and <code v-pre>dladm</code>. <code v-pre>ipadm</code> configures network layer settings. <code v-pre>dladm</code> configures data-link layer settings.</p>
+        </div>
+    </div>
+</div>
+<doc-anchor-target id="freebsd">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#freebsd">#</doc-anchor-trigger>
+        <span>FreeBSD</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">cat /etc/rc.conf</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="systems-that-use-networkmanager">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#systems-that-use-networkmanager">#</doc-anchor-trigger>
+        <span>Systems that use NetworkManager</span>
+    </h3>
+</doc-anchor-target>
+<p>For systems that make use of NetworkManager you can view the devices via:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">nmcli device</code></pre>
+</doc-codeblock></div>
+<p>Additionally, you can list connections via:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">nmcli c [show &lt;int&gt;]</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="nics">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#nics">#</doc-anchor-trigger>
+        <span>NICs</span>
+    </h2>
+</doc-anchor-target>
+<p>Network Interface Cards (NICs) are typically named in a couple of manners.</p>
+<doc-anchor-target id="kernel-naming-scheme">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#kernel-naming-scheme">#</doc-anchor-trigger>
+        <span>Kernel Naming Scheme</span>
+    </h3>
+</doc-anchor-target>
+<p>This traditional kernel naming scheme for NICs is unpredictable and is the default if nothing specific is set.</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p><em><strong>Example:</strong></em> eth0</p>
+        </div>
+    </div>
+</div>
+<doc-anchor-target id="on-board-device-naming-scheme">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#on-board-device-naming-scheme">#</doc-anchor-trigger>
+        <span>On-Board Device Naming Scheme</span>
+    </h3>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p><em><strong>Example:</strong></em> eno1</p>
+        </div>
+    </div>
+</div>
+<doc-anchor-target id="pci-express-naming-scheme">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pci-express-naming-scheme">#</doc-anchor-trigger>
+        <span>PCI Express Naming Scheme</span>
+    </h3>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p><em><strong>Example:</strong></em> ens1, enp2s0 (PCI 2, Slot 0)</p>
+        </div>
+    </div>
+</div>
+<doc-anchor-target id="interface-mac-naming-scheme">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#interface-mac-naming-scheme">#</doc-anchor-trigger>
+        <span>Interface MAC Naming Scheme</span>
+    </h3>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p><em><strong>Example:</strong></em> enx78e7d1ea46da</p>
+        </div>
+    </div>
+</div>
 
                                 
                                 <!-- Required only on API pages -->
@@ -174,13 +345,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../../">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                                                <span class="block mt-1">Index</span>
+                                            </span>
+                                        </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l rounded-r-lg transition-colors duration-150 relative hover:z-5" href="operating-system-basics/unix/networking/network_config/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../operating-system-basics/unix/networking/network_recon/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Network Configuration Information</span>
+                                                <span class="block mt-1">Network Reconnaissance</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -224,6 +402,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Index", isRoot: true, level: 0, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Network Configuration Information", level: 4, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
