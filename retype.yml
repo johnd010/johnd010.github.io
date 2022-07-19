@@ -4,7 +4,17 @@ url: https://jd0101.com
 branding:
   title: Security Research Notes
 links:
-- text: 
-  link: 
+- text: Home
+  link: https://jd0101.com
+  icon: home
+- text: Blog
+  link: https://jd0101.com/blog
+  icon: note
+- text: Twitter
+  link: https://twitter.com/johnd01010
+  icon: "./static/twitter.png"
+- text: Email
+  link: mailto:jd@jd0101.com
+  icon: mail
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
