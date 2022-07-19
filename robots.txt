@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.jd0101.com/sitemap.xml.gz
+Sitemap: https://jd0101.com/sitemap.xml.gz
