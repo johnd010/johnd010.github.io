@@ -1,0 +1,11 @@
+input: .
+output: .retype
+url: https://www.jd0101.com
+branding:
+  title: Security Research Notes
+  label: Docs
+links:
+- text: 
+  link: 
+footer:
+  copyright: "&copy; Copyright {{ year }}. All rights reserved."
