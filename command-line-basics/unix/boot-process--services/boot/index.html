@@ -3,38 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.720911697381">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.720914936833">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>FreeBSD</title>
-    <meta name="title" content="FreeBSD">
-    <meta name="description" content="FreeBSD uses rc scripts for startup services." />
+    <title>Boot Process</title>
+    <meta name="title" content="Boot Process">
+    <meta name="description" content="Note: * NIX systems' kernel process is always /sbin/init." />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://jd0101.com/command-line-basics/unix/startup-services/service-management/freebsd/" />
+    <link rel="canonical" href="https://jd0101.com/command-line-basics/unix/boot-process--services/boot/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jd0101.com/command-line-basics/unix/startup-services/service-management/freebsd/">
-    <meta property="og:title" content="FreeBSD">
-    <meta property="og:description" content="FreeBSD uses rc scripts for startup services.">
+    <meta property="og:url" content="https://jd0101.com/command-line-basics/unix/boot-process--services/boot/">
+    <meta property="og:title" content="Boot Process">
+    <meta property="og:description" content="Note: * NIX systems' kernel process is always /sbin/init.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://jd0101.com/command-line-basics/unix/startup-services/service-management/freebsd/">
-    <meta property="twitter:title" content="FreeBSD">
-    <meta property="twitter:description" content="FreeBSD uses rc scripts for startup services.">
+    <meta property="twitter:url" content="https://jd0101.com/command-line-basics/unix/boot-process--services/boot/">
+    <meta property="twitter:title" content="Boot Process">
+    <meta property="twitter:description" content="Note: * NIX systems' kernel process is always /sbin/init.">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../../resources/css/retype.css?v=2.4.0.720911697381" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.720914936833" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../../resources/js/config.js?v=2.4.0.720911697381" data-turbo-eval="false" defer></script>
-    <script type="text/javascript" src="../../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../../resources/js/lunr.js?v=2.4.0.720911697381" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.720914936833" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.720914936833" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -49,7 +49,7 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="../../../../../" class="flex items-center leading-snug text-xl">
+                        <a id="docs-site-logo" href="../../../../" class="flex items-center leading-snug text-xl">
                             <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">Security Research Notes</span>
                         </a>
                     </div>
@@ -83,7 +83,7 @@
                             </li>
                             <li class="mr-6">
                                 <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://twitter.com/johnd01010">
-                                    <img class="mb-px mr-1" width="18" src="../../../../../static/twitter.png" />
+                                    <img class="mb-px mr-1" width="18" src="../../../../static/twitter.png" />
                                     <span>Twitter</span>
                                 </a>
                             </li>
@@ -195,7 +195,7 @@
                                     </li>
                                     <li class="mr-6">
                                         <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://twitter.com/johnd01010">
-                                            <img class="mb-px mr-1" width="18" src="../../../../../static/twitter.png" />
+                                            <img class="mb-px mr-1" width="18" src="../../../../static/twitter.png" />
                                             <span>Twitter</span>
                                         </a>
                                     </li>
@@ -232,78 +232,119 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="freebsd" class="break-words">
+<doc-anchor-target id="boot-process" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#freebsd">#</doc-anchor-trigger>
-        <span>FreeBSD</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#boot-process">#</doc-anchor-trigger>
+        <span>Boot Process</span>
     </h1>
 </doc-anchor-target>
-<p>FreeBSD uses rc scripts for startup services.</p>
-<p>The configuration files for rc are located at <code v-pre>/etc/defaults/rc.conf</code> and <code v-pre>/etc/rc.conf</code>.</p>
-<doc-anchor-target id="service-command">
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>Note: *NIX systems&#x27; kernel process is always <code v-pre>/sbin/init</code>.</p>
+        </div>
+    </div>
+</div>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>Note: Boot information is typically stored in <code v-pre>/boot/</code></p>
+        </div>
+    </div>
+</div>
+<doc-anchor-target id="nix-boot-process">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#service-command">#</doc-anchor-trigger>
-        <span>Service Command</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#nix-boot-process">#</doc-anchor-trigger>
+        <span>*NIX Boot Process</span>
     </h2>
 </doc-anchor-target>
-<p>The <code v-pre>service</code> command is used to control and manage rc services in FreeBSD.</p>
-<p>The <code v-pre>service</code> command pulls information from <code v-pre>/etc/rc.d/</code> and <code v-pre>/usr/local/etc/rc.d/</code>.</p>
-<doc-anchor-target id="show-started-services">
+<doc-anchor-target id="1biosuefi">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#show-started-services">#</doc-anchor-trigger>
-        <span>Show Started Services</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1biosuefi">#</doc-anchor-trigger>
+        <span>1.BIOS/UEFI</span>
     </h3>
 </doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">service -e</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="show-installed-services">
+<p>At this step, the BIOS/UEFI runs a POST to ensure that hardware and memory functions correctly. Starts the MBR.</p>
+<doc-anchor-target id="2-mbr">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#show-installed-services">#</doc-anchor-trigger>
-        <span>Show Installed Services</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-mbr">#</doc-anchor-trigger>
+        <span>2. MBR</span>
     </h3>
 </doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">service -l</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="look-at-service-scripts-for-dependenciesother-info">
+<p>Next, the MBR loads and executes the GRUB boot loader.</p>
+<p>Typically located at <code v-pre>/dev/hda</code> or <code v-pre>/dev/sda</code>.</p>
+<doc-anchor-target id="3-grub">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#look-at-service-scripts-for-dependenciesother-info">#</doc-anchor-trigger>
-        <span>Look at Service Scripts for Dependencies/Other Info</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-grub">#</doc-anchor-trigger>
+        <span>3. GRUB</span>
     </h3>
 </doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">less /etc/rc.d/ftpd</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="start-a-service">
+<p>The Grand Unified Boot Loader (GRUB) intializes the Kernel.</p>
+<p>GRUB Config files is usually located at <code v-pre>/boot/grub/grub.conf</code>.</p>
+<doc-anchor-target id="4-kernel-initialization">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#start-a-service">#</doc-anchor-trigger>
-        <span>Start a Service</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4-kernel-initialization">#</doc-anchor-trigger>
+        <span>4. Kernel Initialization</span>
     </h3>
 </doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">service ftpd start
-service ftpd onestart</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="check-status-of-a-service">
+<p>The Kernel executes the Kernel process <code v-pre>/sbin/init</code>.</p>
+<doc-anchor-target id="5-init">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#check-status-of-a-service">#</doc-anchor-trigger>
-        <span>Check Status of a Service</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#5-init">#</doc-anchor-trigger>
+        <span>5. Init</span>
     </h3>
 </doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">service ftpd status
-service ftpd onestatus</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="stop-a-service">
+<p><code v-pre>/sbin/init</code> looks at <code v-pre>/etc/inittab</code> to decide what run level to execute.</p>
+<p>Begins execution of run level processes.</p>
+<p>Run Levels are:</p>
+<ul>
+<li>0 – halt</li>
+<li>1 – Single user mode</li>
+<li>2 – Multiuser, without NFS</li>
+<li>3 – Full multiuser mode</li>
+<li>4 – unused</li>
+<li>5 – X11</li>
+<li>6 – reboot</li>
+</ul>
+<doc-anchor-target id="6-runlevel">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#stop-a-service">#</doc-anchor-trigger>
-        <span>Stop a Service</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#6-runlevel">#</doc-anchor-trigger>
+        <span>6. Runlevel</span>
     </h3>
 </doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">service ftpd stop</code></pre>
-</doc-codeblock></div>
+<p>Run level processes are executed.</p>
+<p>Run level folders for scripts to execute:</p>
+<ul>
+<li>Run level 0 – /etc/rc.d/rc0.d/</li>
+<li>Run level 1 – /etc/rc.d/rc1.d/</li>
+<li>Run level 2 – /etc/rc.d/rc2.d/</li>
+<li>Run level 3 – /etc/rc.d/rc3.d/</li>
+<li>Run level 4 – /etc/rc.d/rc4.d/</li>
+<li>Run level 5 – /etc/rc.d/rc5.d/</li>
+<li>Run level 6 – /etc/rc.d/rc6.d/</li>
+</ul>
+<p>You can determine your current run level using the command <code v-pre>runlevel</code>.</p>
+<p>Scripts in the run level folders are pre-fixed with a <code v-pre>K</code> or <code v-pre>S</code> to tell the system if they should <code v-pre>Kill</code> or <code v-pre>Start</code> the script. These scripts are actually symbolic links to scripts in <code v-pre>/etc/init.d/</code> or <code v-pre>/etc/rc.d/init.d/</code>.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -313,20 +354,20 @@ service ftpd onestatus</code></pre>
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../../../command-line-basics/unix/startup-services/service-management/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../../command-line-basics/unix/boot-process--services/service-management/solaris/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Service Management</span>
+                                                <span class="block mt-1">Solaris</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../../command-line-basics/unix/startup-services/service-management/linux/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../command-line-basics/unix/networking/network_config/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Linux</span>
+                                                <span class="block mt-1">Network Configuration Information</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -370,6 +411,6 @@ service ftpd onestatus</code></pre>
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "FreeBSD", level: 5, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Boot Process", level: 4, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>

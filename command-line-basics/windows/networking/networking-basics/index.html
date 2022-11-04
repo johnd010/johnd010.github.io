@@ -3,38 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.720911697381">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.720914936833">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>Linux (CentOS, Debian, etc.)</title>
-    <meta name="title" content="Linux (CentOS, Debian, etc.)">
-    <meta name="description" content="In Upstart, run levels are defined in /etc/init/rc-sysinit.conf." />
+    <title>Windows Networking Basics</title>
+    <meta name="title" content="Windows Networking Basics">
+    <meta name="description" content="ipconfig includes information such as Your IPv4 and IPv6 address, your subnet mask, your default gateway, all Network Interface Cards (NICs), etc." />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://jd0101.com/command-line-basics/unix/startup-services/service-management/linux/" />
+    <link rel="canonical" href="https://jd0101.com/command-line-basics/windows/networking/networking-basics/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jd0101.com/command-line-basics/unix/startup-services/service-management/linux/">
-    <meta property="og:title" content="Linux (CentOS, Debian, etc.)">
-    <meta property="og:description" content="In Upstart, run levels are defined in /etc/init/rc-sysinit.conf.">
+    <meta property="og:url" content="https://jd0101.com/command-line-basics/windows/networking/networking-basics/">
+    <meta property="og:title" content="Windows Networking Basics">
+    <meta property="og:description" content="ipconfig includes information such as Your IPv4 and IPv6 address, your subnet mask, your default gateway, all Network Interface Cards (NICs), etc.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://jd0101.com/command-line-basics/unix/startup-services/service-management/linux/">
-    <meta property="twitter:title" content="Linux (CentOS, Debian, etc.)">
-    <meta property="twitter:description" content="In Upstart, run levels are defined in /etc/init/rc-sysinit.conf.">
+    <meta property="twitter:url" content="https://jd0101.com/command-line-basics/windows/networking/networking-basics/">
+    <meta property="twitter:title" content="Windows Networking Basics">
+    <meta property="twitter:description" content="ipconfig includes information such as Your IPv4 and IPv6 address, your subnet mask, your default gateway, all Network Interface Cards (NICs), etc.">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../../../resources/css/retype.css?v=2.4.0.720911697381" rel="stylesheet" />
+    <link href="../../../../resources/css/retype.css?v=2.4.0.720914936833" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../../../resources/js/config.js?v=2.4.0.720911697381" data-turbo-eval="false" defer></script>
-    <script type="text/javascript" src="../../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../../../resources/js/lunr.js?v=2.4.0.720911697381" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/config.js?v=2.4.0.720914936833" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../../resources/js/lunr.js?v=2.4.0.720914936833" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -49,7 +49,7 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="../../../../../" class="flex items-center leading-snug text-xl">
+                        <a id="docs-site-logo" href="../../../../" class="flex items-center leading-snug text-xl">
                             <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">Security Research Notes</span>
                         </a>
                     </div>
@@ -83,7 +83,7 @@
                             </li>
                             <li class="mr-6">
                                 <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://twitter.com/johnd01010">
-                                    <img class="mb-px mr-1" width="18" src="../../../../../static/twitter.png" />
+                                    <img class="mb-px mr-1" width="18" src="../../../../static/twitter.png" />
                                     <span>Twitter</span>
                                 </a>
                             </li>
@@ -195,7 +195,7 @@
                                     </li>
                                     <li class="mr-6">
                                         <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://twitter.com/johnd01010">
-                                            <img class="mb-px mr-1" width="18" src="../../../../../static/twitter.png" />
+                                            <img class="mb-px mr-1" width="18" src="../../../../static/twitter.png" />
                                             <span>Twitter</span>
                                         </a>
                                     </li>
@@ -232,273 +232,77 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="linux-centos-debian-etc" class="break-words">
+<doc-anchor-target id="windows-networking-basics" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#linux-centos-debian-etc">#</doc-anchor-trigger>
-        <span>Linux (CentOS, Debian, etc.)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#windows-networking-basics">#</doc-anchor-trigger>
+        <span>Windows Networking Basics</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="upstart">
+<doc-anchor-target id="windows-device-networking-information">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#upstart">#</doc-anchor-trigger>
-        <span>Upstart</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#windows-device-networking-information">#</doc-anchor-trigger>
+        <span>Windows Device Networking Information</span>
     </h2>
 </doc-anchor-target>
-<p>In Upstart, run levels are defined in <code v-pre>/etc/init/rc-sysinit.conf</code>.</p>
-<p>Upstart uses &quot;Jobs&quot;, which are defined in <code v-pre>/etc/init/</code>. These jobs fall into three categories:</p>
-<ul>
-<li>Task Jobs - Task Jobs define a process that has a definite end time.</li>
-<li>Service Jobs - Service Jobs define a process which is designed to be long-running with no defined end time.</li>
-<li>Abstract Jobs - Abstract Jobs spawn no child process, but they can be manually started or stopped. These are primarily used within upstart itself.</li>
-</ul>
-<p>Upstart event information is described further in the upstart manual <code v-pre>man upstart-events</code>.</p>
-<p>Upstart can easily define service configurations in the following types of files: <code v-pre>/etc/init/&lt;service&gt;.conf</code>.</p>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><em><strong>UFW Service Example:</strong></em></p>
+<p><code v-pre>ipconfig</code> includes information such as Your IPv4 and IPv6 address, your subnet mask, your default gateway, all Network Interface Cards (NICs), etc.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">start on (starting network-interface
-or starting network manager
-or starting network)</code></pre>
+<pre class="language-none"><code v-pre class="language-none">ipconfig /all</code></pre>
 </doc-codeblock></div>
-        </div>
-    </div>
-</div>
-<doc-anchor-target id="interact-with-upstart-services">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#interact-with-upstart-services">#</doc-anchor-trigger>
-        <span>Interact with Upstart Services</span>
-    </h3>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">initctl</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="list-upstart-jobs">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#list-upstart-jobs">#</doc-anchor-trigger>
-        <span>List Upstart Jobs</span>
-    </h3>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">initctl list</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="list-running-upstart-jobs">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#list-running-upstart-jobs">#</doc-anchor-trigger>
-        <span>List Running Upstart Jobs</span>
-    </h3>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">initctl list | grep running</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="query-individual-service-status">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#query-individual-service-status">#</doc-anchor-trigger>
-        <span>Query Individual Service Status&#x27;</span>
-    </h3>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">initctl status &lt;service&gt;</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="start-service">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#start-service">#</doc-anchor-trigger>
-        <span>Start Service</span>
-    </h3>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">initctl start &lt;service&gt;</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="stop-service">
+<doc-anchor-target id="view-dns-cache-recent-dns-queries-on-the-system">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#stop-service">#</doc-anchor-trigger>
-        <span>Stop Service</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#view-dns-cache-recent-dns-queries-on-the-system">#</doc-anchor-trigger>
+        <span>View DNS Cache (Recent DNS Queries) on the System</span>
     </h2>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">initctl stop &lt;service&gt;</code></pre>
+<pre class="language-none"><code v-pre class="language-none">ipconfig /displaydns | head –n 20</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="systemd">
+<doc-anchor-target id="clear-dns-cache">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#systemd">#</doc-anchor-trigger>
-        <span>Systemd</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#clear-dns-cache">#</doc-anchor-trigger>
+        <span>Clear DNS Cache</span>
     </h2>
 </doc-anchor-target>
-<p>Systemd makes use of unit files.</p>
-<p>Uses default target to determine which units are started at startup.</p>
-<doc-anchor-target id="get-the-default-target-for-the-system">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#get-the-default-target-for-the-system">#</doc-anchor-trigger>
-        <span>Get the default target for the system:</span>
-    </h3>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">ipconfig /flushdns</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="see-local-dns-resolve-settings">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#see-local-dns-resolve-settings">#</doc-anchor-trigger>
+        <span>See local DNS resolve settings</span>
+    </h2>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">systemctl get-default</code></pre>
+<pre class="language-none"><code v-pre class="language-none">tail C:\Windows\System32\drivers\etc\hosts</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="view-cgroup-hierarchy">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#view-cgroup-hierarchy">#</doc-anchor-trigger>
-        <span>View cgroup hierarchy</span>
-    </h3>
+<doc-anchor-target id="view-windows-routing-table">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#view-windows-routing-table">#</doc-anchor-trigger>
+        <span>View Windows Routing Table</span>
+    </h2>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">systemd-cgls</code></pre>
+<pre class="language-none"><code v-pre class="language-none">route -4 print</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="view-cgroup-in-process-list">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#view-cgroup-in-process-list">#</doc-anchor-trigger>
-        <span>View cgroup in process list</span>
-    </h3>
+<doc-anchor-target id="view-arp-table">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#view-arp-table">#</doc-anchor-trigger>
+        <span>View ARP Table</span>
+    </h2>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">ps -eo comm, cgroup</code></pre>
+<pre class="language-none"><code v-pre class="language-none">arp -a</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="view-resource-utilization-by-cgroups">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#view-resource-utilization-by-cgroups">#</doc-anchor-trigger>
-        <span>View resource Utilization by cgroups</span>
-    </h3>
+<doc-anchor-target id="view-listening-network-processes">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#view-listening-network-processes">#</doc-anchor-trigger>
+        <span>View Listening Network Processes</span>
+    </h2>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">systemd-cgtop</code></pre>
+<pre class="language-none"><code v-pre class="language-none">netstat -anobp tcp</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="analyze-length-of-time-to-start-service-units">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#analyze-length-of-time-to-start-service-units">#</doc-anchor-trigger>
-        <span>Analyze length of time to start service units</span>
-    </h3>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">systemd-analyze critical-chain</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="troubleshoot-units-by-seeing-length-of-time-to-start">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#troubleshoot-units-by-seeing-length-of-time-to-start">#</doc-anchor-trigger>
-        <span>Troubleshoot units by seeing length of time to start</span>
-    </h3>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">systemd-analyze blame</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="list-service-units-with-systemctl">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#list-service-units-with-systemctl">#</doc-anchor-trigger>
-        <span>List service units with systemctl</span>
-    </h3>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">systemctl list-units --type service</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="list-startup-services">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#list-startup-services">#</doc-anchor-trigger>
-        <span>List Startup Services</span>
-    </h3>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">systemctl list-unit-files | grep enabled</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="view-status-of-a-service">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#view-status-of-a-service">#</doc-anchor-trigger>
-        <span>View Status of a Service</span>
-    </h3>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">systemctl status &lt;service_name&gt; [-l]</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="view-the-unit-file-for-a-service">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#view-the-unit-file-for-a-service">#</doc-anchor-trigger>
-        <span>View the Unit File for a Service</span>
-    </h3>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">systemctl cat &lt;service_name.service&gt;</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="start-a-service">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#start-a-service">#</doc-anchor-trigger>
-        <span>Start a Service</span>
-    </h3>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">systemctl start &lt;service_name&gt;</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="stop-a-service">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#stop-a-service">#</doc-anchor-trigger>
-        <span>Stop a Service</span>
-    </h3>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">systemctl stop &lt;service_name&gt;</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="view-service-dependencies">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#view-service-dependencies">#</doc-anchor-trigger>
-        <span>View Service Dependencies</span>
-    </h3>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">systemctl list-dependencies --before &lt;service_name.service&gt;</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="list-required-and-wanted-units-greenactive-redinactive">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#list-required-and-wanted-units-greenactive-redinactive">#</doc-anchor-trigger>
-        <span>List Required and Wanted Units (green=active, red=inactive)</span>
-    </h3>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">systemctl list-dependencies multi-user.target</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="disable-service-start-at-boot">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#disable-service-start-at-boot">#</doc-anchor-trigger>
-        <span>Disable Service Start at Boot</span>
-    </h3>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">systemctl disable &lt;service_name.service&gt;</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="make-it-so-a-service-cant-be-started">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#make-it-so-a-service-cant-be-started">#</doc-anchor-trigger>
-        <span>Make it so a Service can&#x27;t be started</span>
-    </h3>
-</doc-anchor-target>
-<p>The <code v-pre>mask</code> command makes it so that you can no longer start the service via the CLI.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">systemctl mask &lt;service_name.service&gt;</code></pre>
-</doc-codeblock></div>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><code v-pre>rc-local.service</code> starts <code v-pre>/etc/rc.d/rc.local</code>... You need to ensure <code v-pre>/etc/rc.local</code> has execute permissions.</p>
-        </div>
-    </div>
-</div>
+<p>You can also dig further into a specific process from your listing via: <code v-pre>tasklist /v /fi &quot;PID eq XXX&quot; /fo list</code></p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -508,20 +312,20 @@ or starting network)</code></pre>
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../../../command-line-basics/unix/startup-services/service-management/freebsd/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../../command-line-basics/windows/networking/netsh/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Free​BSD</span>
+                                                <span class="block mt-1">Netsh</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../../command-line-basics/unix/startup-services/service-management/solaris/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../../command-line-basics/windows/processes/drivers/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Solaris</span>
+                                                <span class="block mt-1">Drivers</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -565,6 +369,6 @@ or starting network)</code></pre>
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Linux", level: 5, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Windows Networking Basics", level: 4, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
